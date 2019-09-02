@@ -50,6 +50,7 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const header = document.getElementsByTagName("header");
 const navigations = document.querySelector("nav");
+navigations.classList.add("green");
 const links = navigations.getElementsByTagName("a");
 links[0].textContent = siteContent.nav["nav-item-1"];
 links[1].textContent = siteContent.nav["nav-item-2"];
@@ -57,6 +58,18 @@ links[2].textContent = siteContent.nav["nav-item-3"];
 links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-4"];
 links[5].textContent = siteContent.nav["nav-item-6"];
+
+// append item to the navigation bar
+const node = document.createElement("a"); // Create a <a> node
+const textnode = document.createTextNode("About us"); // Create a text node
+node.appendChild(textnode); // Append the text to <a>
+navigations.appendChild(node);
+
+// Prepend items to the navigation bar
+const newTag = document.createElement("a");
+const tagText = document.createTextNode("History");
+newTag.appendChild(tagText);
+navigations.insertBefore(newTag, links[2]);
 
 // Header section, Images and text
 const headerImg = document.getElementById("cta-img");
@@ -82,3 +95,12 @@ paragraphs[3].textContent = siteContent["main-content"]["product-content"];
 paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
 const mainSectionImg = (document.getElementById("middle-img").src =
   siteContent["main-content"]["middle-img-src"]);
+
+// Contact
+headingH4[5].textContent = siteContent.contact["contact-h4"];
+paragraphs[5].textContent = siteContent.contact.address;
+paragraphs[6].textContent = siteContent.contact.phone;
+paragraphs[7].textContent = siteContent.contact.email;
+
+// Footer
+paragraphs[8].textContent = siteContent.footer.copyright;
