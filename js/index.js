@@ -58,10 +58,27 @@ links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-4"];
 links[5].textContent = siteContent.nav["nav-item-6"];
 
-const headerImg = document.getElementById("logo-img");
+// Header section, Images and text
+const headerImg = document.getElementById("cta-img");
 const headerSection = document.getElementsByClassName("cta-text");
 const heading = document.getElementsByTagName("h1");
+const text = (heading[0].textContent = siteContent.cta.h1);
 document.getElementsByTagName("button")[0].textContent = siteContent.cta.button;
 
 headerImg.src = siteContent.cta["img-src"];
-console.log(headerImg);
+
+// Second section
+const headingH4 = document.querySelectorAll("h4");
+const paragraphs = document.querySelectorAll("p");
+headingH4[0].textContent = siteContent["main-content"]["features-h4"];
+headingH4[1].textContent = siteContent["main-content"]["about-h4"];
+headingH4[2].textContent = siteContent["main-content"]["services-h4"];
+headingH4[3].textContent = siteContent["main-content"]["product-h4"];
+headingH4[4].textContent = siteContent["main-content"]["vision-h4"];
+paragraphs[0].textContent = siteContent["main-content"]["features-content"];
+paragraphs[1].textContent = siteContent["main-content"]["about-content"];
+paragraphs[2].textContent = siteContent["main-content"]["services-content"];
+paragraphs[3].textContent = siteContent["main-content"]["product-content"];
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"];
+const mainSectionImg = (document.getElementById("middle-img").src =
+  siteContent["main-content"]["middle-img-src"]);
