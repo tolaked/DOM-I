@@ -57,3 +57,11 @@ links[2].textContent = siteContent.nav["nav-item-3"];
 links[3].textContent = siteContent.nav["nav-item-4"];
 links[4].textContent = siteContent.nav["nav-item-4"];
 links[5].textContent = siteContent.nav["nav-item-6"];
+
+const headerImg = document.getElementById("logo-img");
+const headerSection = document.getElementsByClassName("cta-text");
+const heading = document.getElementsByTagName("h1");
+document.getElementsByTagName("button")[0].textContent = siteContent.cta.button;
+
+headerImg.src = siteContent.cta["img-src"];
+console.log(headerImg);
